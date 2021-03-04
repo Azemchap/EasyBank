@@ -1,0 +1,46 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.4;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.header_nav {
+  margin: 20px;
+}
+
+.header_menu > span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #2d314d;
+}
+
+.header_menu > span:not(:last-child) {
+  margin-bottom: 2px;
+}
