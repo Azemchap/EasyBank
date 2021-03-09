@@ -1,5 +1,17 @@
 @import "variables";
+@import "mixins";
 @import "globals";
 @import "header";
 
+
+
+
+
+
+
+.azem, .fm {
+    font-size: $font-m;
+    font-weight: 400;
+    color : $BrightCyan
+}
 

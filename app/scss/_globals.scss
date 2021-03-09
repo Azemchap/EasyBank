@@ -8,10 +8,15 @@ html {
 }
 
 body {
-    padding: 0;
+    padding: 0rem 1rem;
     margin: 0;
     font-family: "Public Sans", sans-serif;
+    font-weight: 300;
     line-height: 1.4;
+    font-size: $font-m;
+    letter-spacing: normal;
+    color: $GrayishBlue;
+
 }
 
 a, a:visited, a:hover {
@@ -30,5 +35,21 @@ a, a:visited, a:hover {
     }
     &-ai-c {
         align-items: center;
+    }
+}
+
+
+// visibility
+.hfm {
+    //hide for tablets & mobile
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hfd {
+    //hide for Desktops
+    @include breakpoint-up(large){
+        display: none;
     }
 }
