@@ -3,11 +3,13 @@
     &_logo {
         img {
             width: 8.8rem;
-            height: 1.6rem;
+            height: 1.4rem;
         }
     }
     &_nav {
-        margin: 1rem;
+        //border: 2px black solid;
+        padding: 1rem 1.5rem;
+
     }
     &_menu {
         >span {
@@ -16,15 +18,41 @@
             height: 2px;
             background-color: $DarkBlue;
             &:not(:last-child) {
-                margin-bottom: 2px;
+                margin-bottom: 4px;
             }
         }
     }
     &_links {
+        // border: 2px black solid;
+
+
         a {
             color: $GrayishBlue;
             &:not(:last-child) {
                 margin-right: 30px;
+            };
+            transition: color 300ms ease-in-out;
+            position: relative;
+        }
+
+        a::before {
+            content:"";
+            position: absolute;
+            display: block;
+            height: 4px;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            opacity: 0;
+            transition : opacity 300ms ease-in-out;
+        }
+        
+
+        a:hover {
+            color: $DarkBlue;
+            &::before {
+            background: linear-gradient(to right, #32cd32,#2be0c2);
+            opacity: .9;
             }
         }
     }

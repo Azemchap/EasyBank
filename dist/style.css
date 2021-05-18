@@ -1,11 +1,16 @@
 .button {
-  padding: .8rem 2.2rem;
+  padding: .8rem 2.1rem;
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border-radius: 4rem;
   border: none;
-  color: white;
+  color: #ffffff;
   font-weight: 400;
   font-size: 0.875rem;
+  transition: opacity 300ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
 
 html {
@@ -25,7 +30,7 @@ body {
   line-height: 1.4;
   font-size: 1.125rem;
   letter-spacing: normal;
-  color: #9698a6;
+  color: #777880;
 }
 
 a, a:visited, a:hover {
@@ -62,11 +67,11 @@ a, a:visited, a:hover {
 
 .header_logo img {
   width: 8.8rem;
-  height: 1.6rem;
+  height: 1.4rem;
 }
 
 .header_nav {
-  margin: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .header_menu > span {
@@ -77,15 +82,38 @@ a, a:visited, a:hover {
 }
 
 .header_menu > span:not(:last-child) {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .header_links a {
-  color: #9698a6;
+  color: #777880;
+  transition: color 300ms ease-in-out;
+  position: relative;
 }
 
 .header_links a:not(:last-child) {
   margin-right: 30px;
+}
+
+.header_links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header_links a:hover {
+  color: #2d314d;
+}
+
+.header_links a:hover::before {
+  background: linear-gradient(to right, #32cd32, #2be0c2);
+  opacity: .9;
 }
 
 .azem, .fm {
